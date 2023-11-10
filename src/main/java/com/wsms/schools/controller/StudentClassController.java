@@ -26,8 +26,8 @@ public class StudentClassController {
     public HttpEntity<?> getStudentClass(final @RequestBody GetClassStudentRequest getClassStudentRequest) {
         return studentClassModel
                 .getStudentClass(getClassStudentRequest)
-                .fold(e -> new ResponseEntity<>(e, HttpStatus.BAD_REQUEST),
-                r -> new ResponseEntity<>(r, HttpStatus.OK));
+                .fold(errorResponse -> new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST),
+                response -> new ResponseEntity<>(response, HttpStatus.OK));
     }
 
     @RequestMapping(value = STUDENT_CLASS_TEST, method = RequestMethod.GET,

@@ -1,0 +1,2 @@
+# wsms-class
+Class Service

@@ -1,0 +1,16 @@
+server:
+  port: 9081
+spring:
+  application:
+    name: school-keeper
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/kusakidb
+    username: root
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: none
+
